@@ -4,7 +4,7 @@ import React from 'react';
 const Wallet= () => (
   <div className="row">
     <div className="col-lg-3 mb30">
-        <span className="box-url left p-3">
+        <span className="box-url left p-3 b-radius">
             {/* <span className="box-url-label">Most Popular</span> */}
             <img src="./img/wallet/1.png" alt="" className="mb20"/>
             <h4>Metamask</h4>
@@ -12,7 +12,7 @@ const Wallet= () => (
         </span>
     </div>
     <div className="col-lg-3 mb30">
-        <span className="box-url left p-3">
+        <span className="box-url left p-3 b-radius">
             <img src="./img/wallet/4.png" alt="" className="mb20"/>
             <h4>WalletConnect</h4>
             <p>Open source protocol for connecting decentralised applications to mobile wallets.</p>

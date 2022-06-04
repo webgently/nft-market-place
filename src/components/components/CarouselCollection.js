@@ -63,105 +63,40 @@ export default class Responsive extends Component {
         }
       ]
     };
+    const NFTList = [
+      { id: 1,  name: "Johnny", chainType: "ERC-192", auther: "./img/author/author-1.jpg" , url: "./art/55.png" },
+      { id: 2,  name: "Jenny", chainType: "ERC-61", auther: "./img/author/author-2.jpg" , url: "./art/133.png" },
+      { id: 3,  name: "Sam", chainType: "ERC-126", auther: "./img/author/author-3.jpg" , url: "./art/2149.png" },
+      { id: 4,  name: "Dean", chainType: "ERC-73", auther: "./img/author/author-4.jpg" , url: "./art/5759.png" },
+      { id: 5,  name: "Tom", chainType: "ERC-85", auther: "./img/author/author-5.jpg" , url: "./art/2373.png" },
+      { id: 6,  name: "Carter", chainType: "ERC-42", auther: "./img/author/author-6.jpg" , url: "./art/6718.png" },
+      { id: 7,  name: "Amik", chainType: "ERC-126", auther: "./img/author/author-7.jpg" , url: "./art/5871.png" },
+      { id: 8,  name: "Henry", chainType: "ERC-85", auther: "./img/author/author-8.jpg" , url: "./art/6739.png" },
+      { id: 9,  name: "elizabeth", chainType: "ERC-61", auther: "./img/author/author-9.jpg" , url: "./art/1645.png" },
+      { id: 10, name: "Tanya", chainType: "ERC-126", auther: "./img/author/author-10.jpg" , url: "./art/988.png" }
+    ]
     return (
         <div className='nft'>
-          <Slider {...settings}>
-            <CustomSlide className='itm' index={1}>
-              <div className="nft_coll">
+        <Slider {...settings}>
+          {NFTList.map(item => { 
+            return (
+              <CustomSlide className='itm' key={item.id} index={item.id}>
+                <div className="nft_coll owner-nft">
                   <div className="nft_wrap">
-                      <span><img src="./img/collections/coll-1.jpg" className="lazy img-fluid" alt=""/></span>
+                    <span><img src={ item.url} className="lazy img-fluid b-radius" alt=""/></span>
                   </div>
                   <div className="nft_coll_pp">
-                      <span onClick={()=> window.open("/home", "_self")}><img className="lazy" src="./img/author/author-1.jpg" alt=""/></span>
-                      <i className="fa fa-check"></i>
+                  <span onClick={() => window.open("/home", "_self")}><img className="lazy" src={ item.auther } alt=""/></span>
+                    <i className="fa fa-check"></i>
                   </div>
                   <div className="nft_coll_info">
-                      <span onClick={()=> window.open("/home", "_self")}><h4>Abstraction</h4></span>
-                      <span>ERC-192</span>
+                  <span onClick={() => window.open("/home", "_self")}><h4>{item.name }</h4></span>
+                    <span>{item.chainType}</span>
                   </div>
-              </div>
-            </CustomSlide>
-
-            <CustomSlide className='itm' index={2}>
-              <div className="nft_coll">
-                  <div className="nft_wrap">
-                      <span><img src="./img/collections/coll-2.jpg" className="lazy img-fluid" alt=""/></span>
-                  </div>
-                  <div className="nft_coll_pp">
-                      <span onClick={()=> window.open("/#", "_self")}><img className="lazy" src="./img/author/author-2.jpg" alt=""/></span>
-                      <i className="fa fa-check"></i>
-                  </div>
-                  <div className="nft_coll_info">
-                      <span onClick={()=> window.open("/#", "_self")}><h4>Patternlicious</h4></span>
-                      <span>ERC-61</span>
-                  </div>
-              </div>
-            </CustomSlide>
-
-            <CustomSlide className='itm' index={3}>
-              <div className="nft_coll">
-                  <div className="nft_wrap">
-                      <span><img src="./img/collections/coll-3.jpg" className="lazy img-fluid" alt=""/></span>
-                  </div>
-                  <div className="nft_coll_pp">
-                      <span onClick={()=> window.open("/#", "_self")}><img className="lazy" src="./img/author/author-3.jpg" alt=""/></span>
-                      <i className="fa fa-check"></i>
-                  </div>
-                  <div className="nft_coll_info">
-                      <span onClick={()=> window.open("/#", "_self")}><h4>Skecthify</h4></span>
-                      <span>ERC-126</span>
-                  </div>
-              </div>
-            </CustomSlide>
-
-            <CustomSlide className='itm' index={4}>
-              <div className="nft_coll">
-                  <div className="nft_wrap">
-                      <span><img src="./img/collections/coll-4.jpg" className="lazy img-fluid" alt=""/></span>
-                  </div>
-                  <div className="nft_coll_pp">
-                      <span onClick={()=> window.open("/#", "_self")}><img className="lazy" src="./img/author/author-4.jpg" alt=""/></span>
-                      <i className="fa fa-check"></i>
-                  </div>
-                  <div className="nft_coll_info">
-                      <span onClick={()=> window.open("/#", "_self")}><h4>Cartoonism</h4></span>
-                      <span>ERC-73</span>
-                  </div>
-              </div>
-            </CustomSlide>
-
-            <CustomSlide className='itm' index={5}>
-              <div className="nft_coll">
-                  <div className="nft_wrap">
-                      <span><img src="./img/collections/coll-5.jpg" className="lazy img-fluid" alt=""/></span>
-                  </div>
-                  <div className="nft_coll_pp">
-                      <span onClick={()=> window.open("/#", "_self")}><img className="lazy" src="./img/author/author-5.jpg" alt=""/></span>
-                      <i className="fa fa-check"></i>
-                  </div>
-                  <div className="nft_coll_info">
-                      <span onClick={()=> window.open("/#", "_self")}><h4>Virtuland</h4></span>
-                      <span>ERC-85</span>
-                  </div>
-              </div>
-            </CustomSlide>
-
-            <CustomSlide className='itm' index={6}>
-              <div className="nft_coll">
-                  <div className="nft_wrap">
-                      <span><img src="./img/collections/coll-6.jpg" className="lazy img-fluid" alt=""/></span>
-                  </div>
-                  <div className="nft_coll_pp">
-                      <span onClick={()=> window.open("/#", "_self")}><img className="lazy" src="./img/author/author-6.jpg" alt=""/></span>
-                      <i className="fa fa-check"></i>
-                  </div>
-                  <div className="nft_coll_info">
-                      <span onClick={()=> window.open("/#", "_self")}><h4>Papercut</h4></span>
-                      <span>ERC-42</span>
-                  </div>
-              </div>
-            </CustomSlide>
-
+                </div>
+              </CustomSlide>
+            )
+          })}
           </Slider>
         </div>
     );

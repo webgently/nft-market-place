@@ -117,18 +117,18 @@ const Header = ({ t }: any) =>{
           <div className='logo px-0'>
               <div className='navbar-title navbar-item'>
                 <NavLink to="/">
-                <img
-                    src="./img/logo-retro.png"
+                  <img
+                    src="./img/logo2.png"
                     className="img-fluid d-block"
                     alt="#"
                   />
                   <img
-                    src="./img/logo-retro.png"
+                    src="./img/logo2.png"
                     className="img-fluid d-3"
                     alt="#"
                   />
                   <img
-                    src="./img/logo-retro.png"
+                    src="./img/logo2.png"
                     className="img-fluid d-none"
                     alt="#"
                   />
@@ -152,9 +152,9 @@ const Header = ({ t }: any) =>{
                     {openMenu && (
                       <div className='item-dropdown'>
                         <div className="dropdown" onClick={closeMenu}>
-                          <NavLink to="/" onClick={() => btn_icon(!showmenu)}>Homepage</NavLink>
-                          <NavLink to="/home1" onClick={() => btn_icon(!showmenu)}>Homepage 1</NavLink>
-                          <NavLink to="/home2" onClick={() => btn_icon(!showmenu)}>Homepage 1</NavLink>
+                          <NavLink to="/" onClick={() => btn_icon(!showmenu)}>HomeType1</NavLink>
+                          <NavLink to="/home1" onClick={() => btn_icon(!showmenu)}>HomeType2</NavLink>
+                          <NavLink to="/home2" onClick={() => btn_icon(!showmenu)}>HomeType3</NavLink>
                         </div>
                       </div>
                     )}
@@ -170,10 +170,10 @@ const Header = ({ t }: any) =>{
                     {openMenu1 && (
                       <div className='item-dropdown'>
                         <div className="dropdown" onClick={closeMenu1}>
-                          <NavLink to="/explore" onClick={() => btn_icon(!showmenu)}>Explore</NavLink>
-                          <NavLink to="/explore2" onClick={() => btn_icon(!showmenu)}>Explore 2</NavLink>
+                          <NavLink to="/explore" onClick={() => btn_icon(!showmenu)}>Explore1</NavLink>
+                          <NavLink to="/explore2" onClick={() => btn_icon(!showmenu)}>Explore2</NavLink>
                           <NavLink to="/rangking" onClick={() => btn_icon(!showmenu)}>Rangking</NavLink>
-                          <NavLink to="/colection" onClick={() => btn_icon(!showmenu)}>Collection</NavLink>
+                          <NavLink to="/collection" onClick={() => btn_icon(!showmenu)}>Collection</NavLink>
                           <NavLink to="/ItemDetail" onClick={() => btn_icon(!showmenu)}>Items Details</NavLink>
                           <NavLink to="/Auction" onClick={() => btn_icon(!showmenu)}>Live Auction</NavLink>
                           <NavLink to="/helpcenter" onClick={() => btn_icon(!showmenu)}>Help Center</NavLink>
@@ -268,9 +268,9 @@ const Header = ({ t }: any) =>{
                         {openMenu && (
                         <div className='item-dropdown'>
                           <div className="dropdown" onClick={closeMenu}>
-                            <NavLink to="/">Homepage</NavLink>
-                            <NavLink to="/home1">Homepage 1</NavLink>
-                            <NavLink to="/home2">Homepage 2</NavLink>
+                            <NavLink to="/">HomeType1</NavLink>
+                            <NavLink to="/home1">HomeType2</NavLink>
+                            <NavLink to="/home2">HomeType3</NavLink>
                           </div>
                         </div>
                       )}
@@ -287,10 +287,10 @@ const Header = ({ t }: any) =>{
                         {openMenu1 && (
                         <div className='item-dropdown'>
                           <div className="dropdown" onClick={closeMenu1}>
-                          <NavLink to="/explore">Explore</NavLink>
-                          <NavLink to="/explore2">Explore 2</NavLink>
+                          <NavLink to="/explore">Explore1</NavLink>
+                          <NavLink to="/explore2">Explore2</NavLink>
                           <NavLink to="/rangking">Rangking</NavLink>
-                          <NavLink to="/colection">Collection</NavLink>
+                          <NavLink to="/collection">Collection</NavLink>
                           <NavLink to="/ItemDetail">Items Details</NavLink>
                           <NavLink to="/Auction">Live Auction</NavLink>
                           <NavLink to="/helpcenter">Help Center</NavLink>

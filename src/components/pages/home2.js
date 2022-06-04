@@ -36,107 +36,102 @@ const GlobalStyles = createGlobalStyle`
     border-top: 1px solid rgba(255,255,255,.1);
   }
 `;
-
-
 const homeone= () => (
   <div>
-  <GlobalStyles />
-      <section className="jumbotron no-bg">
-         <SliderMainParticle/>
-      </section>
-
-      <section className='container no-top no-bottom'>
-        <div className="row">
-            <div className="col-lg-2 col-sm-4 col-6 mb30">
-                <span className="box-url">
-                    <img src="./img/wallet/1.png" alt="" className="mb20"/>
-                    <h4>Metamask</h4>
-                </span>
-            </div>
-
-            <div className="col-lg-2 col-sm-4 col-6 mb30">
-                <span className="box-url">
-                    <img src="./img/wallet/2.png" alt="" className="mb20"/>
-                    <h4>Bitski</h4>
-                </span>
-            </div>       
-
-            <div className="col-lg-2 col-sm-4 col-6 mb30">
-                <span className="box-url">
-                    <img src="./img/wallet/3.png" alt="" className="mb20"/>
-                    <h4>Fortmatic</h4>
-                </span>
-            </div>    
-
-            <div className="col-lg-2 col-sm-4 col-6 mb30">
-                <span className="box-url">
-                    <img src="./img/wallet/4.png" alt="" className="mb20"/>
-                    <h4>WalletConnect</h4>
-                </span>
-            </div>
-
-            <div className="col-lg-2 col-sm-4 col-6 mb30">
-                <span className="box-url">
-                    <img src="./img/wallet/5.png" alt="" className="mb20"/>
-                    <h4>Coinbase Wallet</h4>
-                </span>
-            </div>
-
-            <div className="col-lg-2 col-sm-4 col-6 mb30">
-                <span className="box-url">
-                    <img src="./img/wallet/6.png" alt="" className="mb20"/>
-                    <h4>Arkane</h4>
-                </span>
-            </div>                                       
-        </div>
-      </section>
-
-      <section className='container no-top no-bottom'>
-        <div className='row'>
-          <div className="spacer-double"></div>
-          <div className='col-lg-12 mb-2'>
-              <h2>New Items</h2>
+    <GlobalStyles />
+    <section className="jumbotron no-bg">
+      <SliderMainParticle/>
+    </section>
+    <section className='container no-top no-bottom'>
+      <div className="row">
+          <div className="col-lg-2 col-sm-4 col-6 mb30">
+            <span className="box-url b-radius">
+              <img src="./img/wallet/1.png" alt="" className="mb20"/>
+              <h4>Metamask</h4>
+            </span>
           </div>
-        </div> 
-        <CarouselNew/>
-      </section>
 
-      <section className='container no-top no-bottom'>
-        <div className='row'>
-          <div className="spacer-double"></div>
+          <div className="col-lg-2 col-sm-4 col-6 mb30">
+            <span className="box-url b-radius">
+              <img src="./img/wallet/2.png" alt="" className="mb20"/>
+              <h4>Bitski</h4>
+            </span>
+          </div>       
+
+          <div className="col-lg-2 col-sm-4 col-6 mb30">
+            <span className="box-url b-radius">
+              <img src="./img/wallet/3.png" alt="" className="mb20"/>
+              <h4>Fortmatic</h4>
+            </span>
+          </div>    
+
+          <div className="col-lg-2 col-sm-4 col-6 mb30">
+            <span className="box-url b-radius">
+              <img src="./img/wallet/4.png" alt="" className="mb20"/>
+              <h4>WalletConnect</h4>
+            </span>
+          </div>
+
+          <div className="col-lg-2 col-sm-4 col-6 mb30">
+            <span className="box-url b-radius">
+              <img src="./img/wallet/5.png" alt="" className="mb20"/>
+              <h4>Coinbase Wallet</h4>
+            </span>
+          </div>
+
+          <div className="col-lg-2 col-sm-4 col-6 mb30">
+            <span className="box-url b-radius">
+              <img src="./img/wallet/6.png" alt="" className="mb20"/>
+              <h4>Arkane</h4>
+            </span>
+          </div>                                       
+      </div>
+    </section>
+
+    <section className='container no-top no-bottom'>
+      <div className='row'>
+        <div className="spacer-double"></div>
+        <div className='col-lg-12 mb-2'>
+            <h2>New Items</h2>
+        </div>
+      </div> 
+      <CarouselNew/>
+    </section>
+
+    <section className='container no-top no-bottom'>
+      <div className='row'>
+        <div className="spacer-double"></div>
+        <div className='col-lg-12'>
+            <h2>Top Sellers</h2>
+        </div>
+        <div className='col-lg-12'>
+          <AuthorList/>
+        </div>
+      </div>
+    </section>
+
+    <section className='container no-top no-bottom'>
+      <div className='row'>
+        <div className="spacer-double"></div>
+        <div className='col-lg-12 mb-2'>
+            <h2>Hot Collections</h2>
+        </div>
           <div className='col-lg-12'>
-              <h2>Top Sellers</h2>
-          </div>
-          <div className='col-lg-12'>
-            <AuthorList/>
+            <CarouselCollection/>
           </div>
         </div>
-      </section>
+    </section>
 
-      <section className='container no-top no-bottom'>
-        <div className='row'>
+    <section className='container no-top'>
+      <div className='row'>
           <div className="spacer-double"></div>
-          <div className='col-lg-12 mb-2'>
-              <h2>Hot Collections</h2>
+          <div className='col-lg-12 mb-3'>
+            <h2>Create and Sell Now</h2>
           </div>
-            <div className='col-lg-12'>
-              <CarouselCollection/>
-            </div>
-          </div>
-      </section>
-
-      <section className='container no-top'>
-        <div className='row'>
-            <div className="spacer-double"></div>
-            <div className='col-lg-12 mb-3'>
-              <h2>Create and Sell Now</h2>
-            </div>
-            <FeatureBox/>
-        </div>
-      </section>
-
+          <FeatureBox/>
+      </div>
+    </section>
     <Footer />
-
   </div>
 );
 export default homeone;

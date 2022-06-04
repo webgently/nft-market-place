@@ -3,6 +3,7 @@ import SliderCarousel from '../components/SliderCarousel';
 import CarouselCollection from '../components/CarouselCollection';
 import CarouselNew from '../components/CarouselNew';
 import AuthorList from '../components/authorList';
+import Browsercategory from '../components/Browsecategory';
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 
@@ -39,106 +40,60 @@ const GlobalStyles = createGlobalStyle`
 
 const homethree= () => (
   <div>
-  <GlobalStyles />
-      <section className="jumbotron no-bg no-bottom">
-        <div className='container-fluid'>
-          <div className='row'>
-             <SliderCarousel/>
-          </div>
-        </div>
-      </section>
-
-      <section className='container no-bottom'>
+    <GlobalStyles />
+    <section className="jumbotron no-bg no-bottom"><br />
+      <div className='container-fluid'>
         <div className='row'>
-          <div className='col-lg-12 text-center'>
-              <h2 className='style-2'>Hot Collections</h2>
-              <div className="small-border"></div>
-          </div>
+            <SliderCarousel/>
         </div>
-        <div className='container no-top'>
-          <div className='row'>
-            <div className='col-lg-12 px-0'>
-              <CarouselCollection/>
-            </div>
-          </div>
+      </div>
+    </section>
+    <section className='container no-bottom'>
+      <div className='row'>
+        <div className='col-lg-12 text-center'>
+            <h2 className='style-2'>Hot Collections</h2>
+            <div className="small-border"></div>
         </div>
-      </section>
-
-      <section className='container'>
+      </div>
+      <div className='container no-top'>
         <div className='row'>
-          <div className='col-lg-12 text-center'>
-              <h2 className='style-2'>New Items</h2>
-              <div className="small-border"></div>
+          <div className='col-lg-12 px-0'>
+            <CarouselCollection/>
           </div>
         </div>
-       <CarouselNew/>
-      </section>
-
-      <section className='container no-top'>
-        <div className='row'>
-          <div className='col-lg-12 text-center'>
-              <h2 className='style-2'>Top Seller</h2>
-              <div className="small-border"></div>
-          </div>
-          <div className='col-lg-12'>
-            <AuthorList/>
-          </div>
+      </div>
+    </section>
+    <section className='container'>
+      <div className='row'>
+        <div className='col-lg-12 text-center'>
+            <h2 className='style-2'>New Items</h2>
+            <div className="small-border"></div>
         </div>
-      </section>
-
-      <section className='container no-top'>
-        <div className='row'>
-          <div className='col-lg-12 text-center'>
-              <h2 className='style-2'>Browse Category</h2>
-              <div className="small-border"></div>
-          </div>
+      </div>
+      <CarouselNew/>
+    </section>
+    <section className='container no-top'>
+      <div className='row'>
+        <div className='col-lg-12 text-center'>
+            <h2 className='style-2'>Top Seller</h2>
+            <div className="small-border"></div>
         </div>
-        <div className='container px-0'>
-          <div className="row">
-              <div className="col-lg-2 col-sm-4 col-6 mb30">
-                  <span className="box-url">
-                      <i className="fa fa-image"></i>
-                      <h4>Art</h4>
-                  </span>
-              </div>
-
-              <div className="col-lg-2 col-sm-4 col-6 mb30">
-                  <span className="box-url">
-                      <i className="fa fa-music"></i>
-                      <h4>Music</h4>
-                  </span>
-              </div>       
-
-              <div className="col-lg-2 col-sm-4 col-6 mb30">
-                  <span className="box-url">
-                      <i className="fa fa-search"></i>
-                      <h4>Domain Names</h4>
-                  </span>
-              </div>    
-
-              <div className="col-lg-2 col-sm-4 col-6 mb30">
-                  <span className="box-url">
-                      <i className="fa fa-globe"></i>
-                      <h4>Virtual Worlds</h4>
-                  </span>
-              </div>
-
-              <div className="col-lg-2 col-sm-4 col-6 mb30">
-                  <span className="box-url">
-                      <i className="fa fa-vcard"></i>
-                      <h4>Trading Cards</h4>
-                  </span>
-              </div>
-
-              <div className="col-lg-2 col-sm-4 col-6 mb30">
-                  <span className="box-url">
-                      <i className="fa fa-th"></i>
-                      <h4>Collectibles</h4>
-                  </span>
-              </div>                                       
-          </div>
+        <div className='col-lg-12'>
+          <AuthorList/>
         </div>
-      </section>
+      </div>
+    </section>
+    <section className='container no-top'>
+      <div className='row'>
+        <div className='col-lg-12 text-center'>
+            <h2 className='style-2'>Browse Category</h2>
+            <div className="small-border"></div>
+        </div>
+      </div>
+      <div className='container px-0'>
+        <Browsercategory />                 
+      </div>
+    </section>
     <Footer />
   </div>
 );

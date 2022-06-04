@@ -27,7 +27,7 @@ const logintwo= () => (
               </form>
               <div className="spacer-20"></div>
               
-              <p className="mt-0">eg. create item, create wallet.</p>
+              <p className="mt-0 text-white">eg. create item, create wallet.</p>
               
           </div>
         </div>

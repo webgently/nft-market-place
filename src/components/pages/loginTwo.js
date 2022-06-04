@@ -21,13 +21,13 @@ const logintwo= () => (
       <form name="contactForm" id='contact_form' className="form-border" action=''>
           <h3>Login to your account</h3>
                   <div className="field-set">
-                      <label>Username</label>
+                      <label className='text-white'>Username</label>
                       <input type='text' name='name' id='name' className="form-control" placeholder=""/>
                   </div>
 
 
                   <div className="field-set">
-                      <label>Password</label>
+                      <label className='text-white'>Password</label>
                       <input type='text' name='email' id='email' className="form-control" placeholder=""/>
                   </div>
 
@@ -38,7 +38,7 @@ const logintwo= () => (
               <div className="spacer-single"></div>
 
               <ul className="list s3">
-                  <li>Or login with:</li>
+                  <li className='text-white'>Or login with:</li>
                   <li><span>Facebook</span></li>
                   <li><span>Google</span></li>
                   <li><span>Instagram</span></li>

@@ -15,8 +15,6 @@ const Outer = styled.div`
   border-radius: 8px;
 `;
 
-
-
 class CustomSlide extends Component {
   render() {
     const { index, ...props } = this.props;
@@ -27,7 +25,6 @@ class CustomSlide extends Component {
 }
 
 export default class Responsive extends Component {
-
   dummyData = [{
         deadline:"December, 30, 2021",
         authorLink: "#",
@@ -195,13 +192,11 @@ export default class Responsive extends Component {
         price: "0.08 ETH",
         bid: "1/20",
         likes: 50
-    }]
-
+  }]
   constructor(props) {
       super(props);
       this.state = { deadline: "January, 10, 2022", deadline1: "February, 10, 2022", deadline2: "February, 1, 2022" };
-    }
-
+  }
   render() {
     var settings = {
       infinite: false,
@@ -253,222 +248,70 @@ export default class Responsive extends Component {
         }
       ]
     };
+    const NFTList = [
+      { id: 1,  nftname: "#55", price: "0.8 BNB", num: "1/22", health: 90, author: "./img/author/author-1.jpg", url: "/art/55.png" },
+      { id: 2,  nftname: "#60", price: "0.7 BNB", num: "1/15", health: 80, author: "./img/author/author-2.jpg", url: "/art/60.png" },
+      { id: 3,  nftname: "#65", price: "0.6 BNB", num: "1/13", health: 70, author: "./img/author/author-3.jpg", url: "/art/65.png" },
+      { id: 4,  nftname: "#83", price: "0.5 BNB", num: "1/10", health: 60, author: "./img/author/author-4.jpg", url: "/art/83.png" },
+      { id: 5,  nftname: "#114", price: "0.8 BNB", num: "1/20", health: 80, author: "./img/author/author-5.jpg", url: "/art/114.png" },
+      { id: 6,  nftname: "#133", price: "0.9 BNB", num: "1/5", health: 70, author: "./img/author/author-6.jpg", url: "/art/133.png" },
+      { id: 7,  nftname: "#138", price: "0.5 BNB", num: "1/10", health: 80, author: "./img/author/author-7.jpg", url: "/art/138.png" },
+      { id: 8,  nftname: "#205", price: "0.5 BNB", num: "1/14", health: 90, author: "./img/author/author-8.jpg", url: "/art/205.png" },
+      { id: 9,  nftname: "#207", price: "0.6 BNB", num: "1/8", health: 70, author: "./img/author/author-9.jpg", url: "/art/207.png" },
+      { id: 10, nftname: "#213", price: "0.8 BNB", num: "1/10", health: 80, author: "./img/author/author-10.jpg", url: "/art/213.png" },
+      { id: 11, nftname: "#219", price: "0.5 BNB", num: "1/5", health: 90, author: "./img/author/author-4.jpg", url: "/art/219.png" },
+      { id: 12, nftname: "#242", price: "0.9 BNB", num: "1/9", health: 60, author: "./img/author/author-6.jpg", url: "/art/242.png" },
+      { id: 13, nftname: "#353", price: "0.5 BNB", num: "1/10", health: 70, author: "./img/author/author-7.jpg", url: "/art/353.png" },
+      { id: 14, nftname: "#488", price: "0.8 BNB", num: "1/5", health: 95, author: "./img/author/author-4.jpg", url: "/art/488.png" },
+      { id: 15, nftname: "#506", price: "0.7 BNB", num: "1/2", health: 70, author: "./img/author/author-5.jpg", url: "/art/506.png" },
+    ];
     return (
         <div className='nft'>
           <Slider {...settings}>
-            <CustomSlide className='itm' index={1}>
-            <div className="d-item">
-              <div className="nft__item">
-                  <div className="de_countdown">
-                  <Clock deadline={this.state.deadline} />
+            {NFTList.map(item => { 
+              return (
+                <CustomSlide className='itm' key={item.id} index={item.id}>
+                  <div className="d-item">
+                    <div className="nft__item slider-item">
+                        {/* <div className="de_countdown">
+                        <Clock deadline={this.state.deadline} />
+                        </div> */}
+                        <div className="author_list_pp">
+                            <span onClick={()=> window.open("/home1", "_self")}>                                    
+                            <img className="lazy" src={ item.author} alt=""/>
+                              <i className="fa fa-check"></i>
+                            </span>
+                        </div>
+                        <div className="nft__item_wrap">
+                          <Outer>
+                            <span>
+                              <img src={ item.url } className="lazy nft__item_preview" alt=""/>
+                            </span>
+                          </Outer>
+                        </div>
+                        <div className="nft__item_info">
+                            <span onClick={()=> window.open("/#", "_self")}>
+                              <h4>{ item.nftname }</h4>
+                            </span>
+                            <div className="nft__item_price">
+                              {item.price}<span>{ item.num }</span>
+                            </div>
+                            <div className="nft__item_action">
+                              <div className="nft_item_actbtn" onClick={()=> window.open("/#", "_self")}>
+                                <h4>Place&nbsp;a&nbsp;bid</h4>
+                                <h4>Place&nbsp;a&nbsp;bid</h4>
+                              </div>
+                              {/* <span onClick={()=> window.open("/#", "_self")}>Place a bid</span> */}
+                            </div>
+                            <div className="nft__item_like">
+                              <i className="fa fa-heart"></i><span>{ item.health}</span>
+                            </div>                            
+                        </div> 
+                    </div>
                   </div>
-                  <div className="author_list_pp">
-                      <span onClick={()=> window.open("/home1", "_self")}>                                    
-                          <img className="lazy" src="./img/author/author-1.jpg" alt=""/>
-                          <i className="fa fa-check"></i>
-                      </span>
-                  </div>
-                  <div className="nft__item_wrap">
-                    <Outer>
-                      <span>
-                          <img src="./img/items/static-1.jpg" className="lazy nft__item_preview" alt=""/>
-                      </span>
-                    </Outer>
-                  </div>
-                  <div className="nft__item_info">
-                      <span onClick={()=> window.open("/#", "_self")}>
-                          <h4>Pinky Ocean</h4>
-                      </span>
-                      <div className="nft__item_price">
-                          0.08 ETH<span>1/20</span>
-                      </div>
-                      <div className="nft__item_action">
-                          <span onClick={()=> window.open("/#", "_self")}>Place a bid</span>
-                      </div>
-                      <div className="nft__item_like">
-                          <i className="fa fa-heart"></i><span>50</span>
-                      </div>                            
-                  </div> 
-              </div>
-            </div>
-            </CustomSlide>
-
-            <CustomSlide className='itm' index={2}>
-              <div className="d-item">
-                <div className="nft__item">
-                    <div className="author_list_pp">
-                        <span onClick={()=> window.open("/#", "_self")}>                                    
-                            <img className="lazy" src="./img/author/author-10.jpg" alt=""/>
-                            <i className="fa fa-check"></i>
-                        </span>
-                    </div>
-                    <div className="nft__item_wrap">
-                      <Outer>
-                        <span>
-                            <img src="./img/items/static-2.jpg" className="lazy nft__item_preview" alt=""/>
-                        </span>
-                      </Outer>
-                    </div>
-                    <div className="nft__item_info">
-                        <span onClick={()=> window.open("/#", "_self")}>
-                            <h4>Deep Sea Phantasy</h4>
-                        </span>
-                        <div className="nft__item_price">
-                            0.06 ETH<span>1/22</span>
-                        </div>
-                        <div className="nft__item_action">
-                            <span onClick={()=> window.open("/#", "_self")}>Place a bid</span>
-                        </div>
-                        <div className="nft__item_like">
-                            <i className="fa fa-heart"></i><span>80</span>
-                        </div>                                 
-                    </div> 
-                </div>
-            </div>
-            </CustomSlide>
-
-            <CustomSlide className='itm' index={3}>
-              <div className="d-item">
-                <div className="nft__item">
-                    <div className="de_countdown">
-                    <Clock deadline={this.state.deadline1} />
-                    </div>
-                    <div className="author_list_pp">
-                        <span onClick={()=> window.open("/#", "_self")}>                                    
-                            <img className="lazy" src="./img/author/author-11.jpg" alt=""/>
-                            <i className="fa fa-check"></i>
-                        </span>
-                    </div>
-                    <div className="nft__item_wrap">
-                      <Outer>
-                        <span>
-                            <img src="./img//items/static-3.jpg" className="lazy nft__item_preview" alt=""/>
-                        </span>
-                      </Outer>
-                    </div>
-                    <div className="nft__item_info">
-                        <span onClick={()=> window.open("/#", "_self")}>
-                            <h4>Rainbow Style</h4>
-                        </span>
-                        <div className="nft__item_price">
-                            0.05 ETH<span>1/11</span>
-                        </div>
-                        <div className="nft__item_action">
-                            <span onClick={()=> window.open("/#", "_self")}>Place a bid</span>
-                        </div>
-                        <div className="nft__item_like">
-                            <i className="fa fa-heart"></i><span>97</span>
-                        </div>                                 
-                    </div> 
-                </div>
-            </div>
-            </CustomSlide>
-
-            <CustomSlide className='itm' index={4}>
-            <div className="d-item">
-                <div className="nft__item">
-                    <div className="author_list_pp">
-                        <span onClick={()=> window.open("/#", "_self")}>                                    
-                            <img className="lazy" src="./img/author/author-12.jpg" alt=""/>
-                            <i className="fa fa-check"></i>
-                        </span>
-                    </div>
-                    <div className="nft__item_wrap">
-                      <Outer>
-                        <span>
-                            <img src="./img/items/static-4.jpg" className="lazy nft__item_preview" alt=""/>
-                        </span>
-                      </Outer>
-                    </div>
-                    <div className="nft__item_info">
-                        <span onClick={()=> window.open("/#", "_self")}>
-                            <h4>Two Tigers</h4>
-                        </span>
-                        <div className="nft__item_price">
-                            0.02 ETH<span>1/15</span>
-                        </div>
-                        <div className="nft__item_action">
-                            <span onClick={()=> window.open("/#", "_self")}>Place a bid</span>
-                        </div>
-                        <div className="nft__item_like">
-                            <i className="fa fa-heart"></i><span>73</span>
-                        </div>                                 
-                    </div> 
-                </div>
-            </div>
-            </CustomSlide>
-
-            <CustomSlide className='itm' index={5}>
-            <div className="d-item">
-                <div className="nft__item">
-                    <div className="author_list_pp">
-                        <span onClick={()=> window.open("/#", "_self")}>                                    
-                            <img className="lazy" src="./img/author/author-9.jpg" alt=""/>
-                            <i className="fa fa-check"></i>
-                        </span>
-                    </div>
-                    <div className="nft__item_wrap">
-                      <Outer>
-                        <span>
-                            <img src="./img/items/anim-4.webp" className="lazy nft__item_preview" alt=""/>
-                        </span>
-                      </Outer>
-                    </div>
-                    <div className="nft__item_info">
-                        <span onClick={()=> window.open("/#", "_self")}>
-                            <h4>The Truth</h4>
-                        </span>
-                        <div className="nft__item_price">
-                            0.06 ETH<span>1/20</span>
-                        </div>
-                        <div className="nft__item_action">
-                            <span onClick={()=> window.open("/#", "_self")}>Place a bid</span>
-                        </div>
-                        <div className="nft__item_like">
-                            <i className="fa fa-heart"></i><span>26</span>
-                        </div>                                 
-                    </div>
-                </div>
-            </div>
-            </CustomSlide>
-
-            <CustomSlide className='itm' index={6}>
-            <div className="d-item">
-                <div className="nft__item">
-                    <div className="de_countdown">
-                      <Clock deadline={this.state.deadline2} />
-                    </div>
-                    <div className="author_list_pp">
-                        <span onClick={()=> window.open("/#", "_self")}>                                    
-                            <img className="lazy" src="./img/author/author-2.jpg" alt=""/>
-                            <i className="fa fa-check"></i>
-                        </span>
-                    </div>
-                    <div className="nft__item_wrap">
-                      <Outer>
-                        <span>
-                            <img src="./img/items/anim-2.webp" className="lazy nft__item_preview" alt=""/>
-                        </span>
-                      </Outer>
-                    </div>
-                    <div className="nft__item_info">
-                        <span onClick={()=> window.open("/#", "_self")}>
-                            <h4>Running Puppets</h4>
-                        </span>
-                        <div className="nft__item_price">
-                            0.03 ETH<span>1/24</span>
-                        </div>    
-                        <div className="nft__item_action">
-                            <span onClick={()=> window.open("/#", "_self")}>Place a bid</span>
-                        </div>
-                        <div className="nft__item_like">
-                            <i className="fa fa-heart"></i><span>45</span>
-                        </div>                                  
-                    </div> 
-                </div>
-            </div>
-            </CustomSlide>
-
+                </CustomSlide>
+              )
+            })}
           </Slider>
         </div>
     );

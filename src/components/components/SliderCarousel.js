@@ -88,7 +88,6 @@ export default class Responsive extends Component {
         }
       ]
     };
-
     return (
         <div className='nft-big'>
           <Slider {...settings}>

@@ -50,7 +50,7 @@ const footer= () => (
                             <p>Signup for our newsletter to get the latest news in your inbox.</p>
                             <form action="#" className="row form-dark" id="form_subscribe" method="post" name="form_subscribe">
                                 <div className="col text-center">
-                                    <input className="form-control" id="txt_subscribe" name="txt_subscribe" placeholder="enter your email" type="text" /> 
+                                    <input className="form-control b-radius" id="txt_subscribe" name="txt_subscribe" placeholder="enter your email" type="text" /> 
                                     <Link to="" id="btn-subscribe">
                                       <i className="arrow_right bg-color-secondary"></i>
                                     </Link>
@@ -70,7 +70,7 @@ const footer= () => (
                             <div className="de-flex">
                                 <div className="de-flex-col">
                                     <span onClick={()=> window.open("", "_self")}>
-                                        <span className="copy">&copy; Copyright 2021 - Gigaland by Designesia</span>
+                                        <span className="copy">&copy; Copyright 2022 - Planets by Designesia</span>
                                     </span>
                                 </div>
                                 <div className="de-flex-col">

@@ -27,26 +27,25 @@ const inline = keyframes`
 `;
 
 const slidermainparticle= () => (
- <div className="container">
+  <div className="container">
     <div className="row align-items-center">
-          <div className="col-md-6">
-              <div className="spacer-single"></div>
-              <h6> <span className="text-uppercase color">Gigaland Market</span></h6>
-              <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
-              <h1>Create, sell or collect digital items.</h1>
-              </Reveal>
-              <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
-              <p className="lead">
-              Unit of data stored on a digital ledger, called a blockchain, that certifies a digital asset to be unique and therefore not interchangeable
-              </p>
-              </Reveal>
-              <div className="spacer-10"></div>
-              <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
+        <div className="col-md-6">
+          <div className="spacer-single"></div>
+          <h6> <span className="text-uppercase color">Planets Market</span></h6>
+          <Reveal className='onStep' keyframes={fadeInUp} delay={300} duration={900} triggerOnce>
+            <h1>Create, sell or collect digital items.</h1>
+          </Reveal>
+          <Reveal className='onStep' keyframes={fadeInUp} delay={600} duration={900} triggerOnce>
+            <p className="lead text-white">
+            Unit of data stored on a digital ledger, called a blockchain, that certifies a digital asset to be unique and therefore not interchangeable
+          </p>
+          </Reveal>
+          <div className="spacer-10"></div>
+            <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
               <span onClick={()=> window.open("#", "_self")} className="btn-main inline lead">Explore</span>
               <div className="mb-sm-30"></div>
-              </Reveal>
-
-              <Reveal className='onStep d-inline' keyframes={inline} delay={900} duration={1200} triggerOnce>
+            </Reveal>
+            <Reveal className='onStep d-inline' keyframes={inline} delay={900} duration={1200} triggerOnce>
               <div className="row">
                   <div className="spacer-single"></div>
                   <div className="row">
@@ -72,14 +71,16 @@ const slidermainparticle= () => (
                           </div>
                       </div>
               </div>
-              </Reveal>
+            </Reveal>
           </div>
           <div className="col-md-6 xs-hide">
-          <Reveal className='onStep d-inline' keyframes={inline} delay={300} duration={1200} triggerOnce>
-              <img src="./img/misc/women-with-vr.png" className="img-fluid" alt=""/>
-          </Reveal>
-          </div>
+            <Reveal className='onStep d-inline' keyframes={inline} delay={300} duration={1200} triggerOnce><br />
+              <video autoPlay="true" loop className="img-fluid b-radius">
+                <source src="video/5353.mp4" type="video/mp4" />
+              </video>
+            </Reveal>
+        </div>
       </div>
-    </div>
+  </div>
 );
 export default slidermainparticle;

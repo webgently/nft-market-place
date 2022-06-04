@@ -9,7 +9,7 @@ import Explore from "./pages/explore";
 import Explore2 from "./pages/explore2";
 import Helpcenter from "./pages/helpcenter";
 import Rangking from "./pages/rangking";
-import Colection from "./pages/colection";
+import Colection from "./pages/collection";
 import ItemDetail from "./pages/ItemDetail";
 import Author from "./pages/Author";
 import Wallet from "./pages/wallet";
@@ -71,7 +71,7 @@ const app = () => (
                 <Explore2 path="/explore2" />
                 <Helpcenter path="/helpcenter" />
                 <Rangking path="/rangking" />
-                <Colection path="/colection" />
+                <Colection path="/collection" />
                 <ItemDetail path="/ItemDetail" />
                 <Author path="/Author" />
                 <Wallet path="/wallet" />

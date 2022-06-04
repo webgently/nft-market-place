@@ -26,7 +26,7 @@ const logintwo= () => (
           <div className="col-lg-4 offset-lg-4 m-auto px-0">
             <div className="box-login">
               <h3 className="mb10">Sign In</h3>
-              <p>Login using an existing account or create a new account <span>here</span>.</p>
+              <p className='text-white'>Login using an existing account or create a new account <span>here</span>.</p>
               <form name="contactForm" id='contact_form' className="form-border" action='#'>
 
                   <div className="field-set">
@@ -43,7 +43,7 @@ const logintwo= () => (
                 
                 <div className="clearfix"></div>  
                   <ul className="list s3">
-                      <li>Login with:</li>
+                      <li className='text-white'>Login with:</li>
                       <li><span >Facebook</span></li>
                       <li><span >Google</span></li>
                   </ul>

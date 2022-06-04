@@ -66,74 +66,48 @@ export default class Responsive extends Component {
         }
       ]
     };
+    const NFTList = [
+      { id: 1,  bname: "Johnny", sname: "url", url: "/gif/868.gif" },
+      { id: 2,  bname: "Jenny", sname: "url", url: "/gif/1569.gif" },
+      { id: 3,  bname: "Sam", sname: "url", url: "/gif/1088.gif" },
+      { id: 4,  bname: "Dean", sname: "url", url: "/gif/1712.gif" },
+      { id: 5,  bname: "Dean", sname: "url", url: "/gif/6072.gif" },
+      { id: 6,  bname: "Dean", sname: "url", url: "/gif/2568.gif" },
+      { id: 7,  bname: "Dean", sname: "url", url: "/gif/6386.gif" },
+      { id: 8,  bname: "Dean", sname: "url", url: "/gif/4368.gif" },
+      { id: 9,  bname: "Dean", sname: "url", url: "/gif/6806.gif" },
+      { id: 10, bname: "Dean", sname: "url", url: "/gif/5247.gif" },
+      { id: 11, bname: "Johnny", sname: "url", url: "/gif/7050.gif" },
+      { id: 12, bname: "Jenny", sname: "url", url: "/gif/5353.gif" },
+      { id: 13, bname: "Sam", sname: "url", url: "/gif/8648.gif" },
+      { id: 14, bname: "Dean", sname: "url", url: "/gif/5879.gif" },
+      { id: 15, bname: "Dean", sname: "url", url: "/gif/9124.gif" },
+      { id: 16, bname: "Dean", sname: "url", url: "/gif/6738.gif" },
+      { id: 17, bname: "Dean", sname: "url", url: "/gif/9598.gif" },
+      { id: 18, bname: "Dean", sname: "url", url: "/gif/9609.gif" },
+      { id: 19, bname: "Dean", sname: "url", url: "/gif/9907.gif" },
+      { id: 20, bname: "Dean", sname: "url", url: "/gif/9843.gif" }
+    ];
     return (
       <div className='nft-big'>
         <Slider {...settings}>
-          <CustomSlide className='itm' index={1}>
-            <div className="nft_pic">                            
-                <span>
-                    <span className="nft_pic_info">
-                        <span className="nft_pic_title">The Era of 90's</span>
-                        <span className="nft_pic_by">Gayle Hicks</span>
+          { NFTList.map(item => { 
+            return (
+              <CustomSlide className='itm' key={item.id} index={item.id}>
+                <div className="nft_pic">                            
+                    <span>
+                        <span className="nft_pic_info">
+                          <span className="nft_pic_title">The Era of 90's</span>
+                          <span className="nft_pic_by">Gayle Hicks</span>
+                        </span>
                     </span>
-                </span>
-                <div className="nft_pic_wrap">
-                    <img src="./img/carousel/crs-6.jpg" className="lazy img-fluid" alt=""/>
+                    <div className="nft_pic_wrap">
+                      <img src={ item.url } className="lazy img-fluid" alt=""/>
+                    </div>
                 </div>
-            </div>
-          </CustomSlide>
-          <CustomSlide className='itm' index={2}>
-            <div className="nft_pic">                            
-                <span>
-                    <span className="nft_pic_info">
-                        <span className="nft_pic_title">live Arts</span>
-                        <span className="nft_pic_by">Nicholas Daniels</span>
-                    </span>
-                </span>
-                <div className="nft_pic_wrap">
-                    <img src="./img/carousel/crs-5.jpg" className="lazy img-fluid" alt=""/>
-                </div>
-            </div>
-          </CustomSlide>
-          <CustomSlide className='itm' index={3}>
-            <div className="nft_pic">                            
-                <span >
-                    <span className="nft_pic_info">
-                        <span className="nft_pic_title">Hot Lava</span>
-                        <span className="nft_pic_by">Nicholas Daniels</span>
-                    </span>
-                </span>
-                <div className="nft_pic_wrap">
-                    <img src="./img/carousel/crs-3.jpg" className="lazy img-fluid" alt=""/>
-                </div>
-            </div>
-          </CustomSlide>
-          <CustomSlide className='itm' index={4}>
-            <div className="nft_pic">                            
-                <span >
-                    <span className="nft_pic_info">
-                        <span className="nft_pic_title">Loop Donut</span>
-                        <span className="nft_pic_by">Lori Hart</span>
-                    </span>
-                </span>
-                <div className="nft_pic_wrap">
-                    <img src="./img/items/anim-5.webp" className="lazy img-fluid" alt=""/>
-                </div>
-            </div>
-          </CustomSlide>
-          <CustomSlide className='itm' index={5}>
-            <div className="nft_pic">                            
-                <span >
-                    <span className="nft_pic_info">
-                        <span className="nft_pic_title">I Believe I Can Fly</span>
-                        <span className="nft_pic_by">Fred Ryan</span>
-                    </span>
-                </span>
-                <div className="nft_pic_wrap">
-                    <img src="./img/items/anim-8.webp" className="lazy img-fluid" alt=""/>
-                </div>
-            </div>
-          </CustomSlide>
+              </CustomSlide>
+            )})
+          }
         </Slider>
       </div>
     );

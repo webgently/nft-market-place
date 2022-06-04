@@ -19,8 +19,8 @@ const register= () => (
     <div className="row">
     <div className='spacer-double'></div>
     <div className="col-md-8 offset-md-2">
-      <h3>Don't have an account? Register now.</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <h3>Don't have an account? Register now.</h3>
+        <p className='text-white'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 
       <div className="spacer-10"></div>
 
@@ -30,42 +30,42 @@ const register= () => (
 
                             <div className="col-md-6">
                                 <div className="field-set">
-                                    <label>Name:</label>
+                                    <label className="text-white">Name:</label>
                                     <input type='text' name='name' id='name' className="form-control"/>
                                 </div>
                             </div>
 
                             <div className="col-md-6">
                                 <div className="field-set">
-                                    <label>Email Address:</label>
+                                    <label className="text-white">Email Address:</label>
                                     <input type='text' name='email' id='email' className="form-control"/>
                                 </div>
                             </div>
 
                             <div className="col-md-6">
                                 <div className="field-set">
-                                    <label>Choose a Username:</label>
+                                    <label className="text-white">Choose a Username:</label>
                                     <input type='text' name='username' id='username' className="form-control"/>
                                 </div>
                             </div>
 
                             <div className="col-md-6">
                                 <div className="field-set">
-                                    <label>Phone:</label>
+                                    <label className="text-white">Phone:</label>
                                     <input type='text' name='phone' id='phone' className="form-control"/>
                                 </div>
                             </div>
 
                             <div className="col-md-6">
                                 <div className="field-set">
-                                    <label>Password:</label>
+                                    <label className="text-white">Password:</label>
                                     <input type='text' name='password' id='password' className="form-control"/>
                                 </div>
                             </div>
 
                             <div className="col-md-6">
                                 <div className="field-set">
-                                    <label>Re-enter Password:</label>
+                                    <label className="text-white">Re-enter Password:</label>
                                     <input type='text' name='re-password' id='re-password' className="form-control"/>
                                 </div>
                             </div>
