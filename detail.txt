@@ -1,0 +1,10 @@
+1.The website must have the function of mint NFT
+2.There must be an NFT lottery function
+3.Lottery prizes are to be claimed on the website
+4.All NFTs must be staked for dividends
+5.Dividend rewards must be collected on the website
+6.There is a transaction fee for receiving dividends
+7.All NFTs to be traded on our website like a NFT marketplace.
+
+1.Contracts to be deployed on the Binance Smart Chain
+2.The website should support both Chinese and English
