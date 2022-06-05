@@ -83,8 +83,6 @@ const progress= () => (
 
         </div>
     </section>
-
-
   <Footer />
 </div>
 

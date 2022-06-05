@@ -1,6 +1,4 @@
 /* CSS Document */
-
-
 /* 
 *
 *
@@ -8,7 +6,6 @@
 *
 *
 *
-
   color / $white
   font / @import 
   general / html
@@ -39,28 +36,21 @@
   media all / @media only screen and (max-width: 1199px)
 
 */
-
-
-
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
-
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #111827;
   border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: #504f4f;
 }
-
 /*color*/
 $white: #fff;
 $gray: #bbb;
@@ -74,12 +64,10 @@ $color_more: #333;
 .col-white{
   color: $white;
 }
-
 /*font*/
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
-
 /*general*/
 html {scroll-behavior: auto;}
 body {
@@ -130,7 +118,6 @@ section{
     background: rgb(247, 244, 253);
   }
 }
-
 .wraper{
   padding: 0;
   display: block;
@@ -165,7 +152,6 @@ section{
   color: $black;
   background: $white;
 }
-
 .black_more{
   background: $black_more;
 }
@@ -241,7 +227,6 @@ section{
     transform: rotateZ(60deg) translate(0, -12em);
   }
 }
-
 @keyframes sheen {
   0% {
     opacity: 1;
@@ -280,7 +265,6 @@ section{
     justify-content: center;
     align-items: center;
 }
-
 /**** divider ***/
 .spacer-single {
     width: 100%;
@@ -342,7 +326,6 @@ hr {
     border-top: solid 1px #ddd;
     margin: 40px 0 40px 0;
 }
-
 /**** heading ***/
 h1,
 h2,
