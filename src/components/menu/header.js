@@ -3,28 +3,6 @@ import Breakpoint, { BreakpointProvider, setDefaultBreakpoints } from "react-soc
 import { header } from 'react-bootstrap';
 import { Link } from '@reach/router';
 import useOnclickOutside from "react-cool-onclickoutside";
-
-// import { SvgIcon } from "../../common/SvgIcon";
-import { withTranslation } from "react-i18next";
-import i18n from "i18next";
-import {
-  FooterSection,
-  Title,
-  // NavLink,
-  Extra,
-  LogoContainer,
-  Para,
-  Large,
-  Chat,
-  Empty,
-  FooterContainer,
-  Language,
-  Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
-} from "./styles";
-
-
 setDefaultBreakpoints([
   { xs: 0 },
   { l: 1199 },
@@ -236,25 +214,7 @@ const Header = ({ t }: any) =>{
                     </div>
                   </div> */}
                   </>
-                  <Label htmlFor="select-lang">{t("Language")}</Label>
-                  <LanguageSwitchContainer>
-                    <LanguageSwitch onClick={() => handleChange("en")}>
-                      {/* <SvgIcon
-                        src="united-states.svg"
-                        aria-label="homepage"
-                        width="30px"
-                        height="30px"
-                      /> */}
-                    </LanguageSwitch>
-                    <LanguageSwitch onClick={() => handleChange("ch")}>
-                      {/* <SvgIcon
-                        src="china.svg"
-                        aria-label="homepage"
-                        width="30px"
-                        height="30px"
-                      /> */}
-                    </LanguageSwitch>
-                  </LanguageSwitchContainer>
+                 
                 </div>
                 }
               </Breakpoint>
@@ -377,4 +337,4 @@ const Header = ({ t }: any) =>{
       </header>
     );
 }
-export default withTranslation()(Header);
+export default Header;
