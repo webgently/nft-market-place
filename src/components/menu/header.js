@@ -114,7 +114,7 @@ const Header = ({ t }: any) =>{
       <header id="myHeader" className='navbar header_color'>
         <div className='container'>
           <div className='row w-100-nav'>
-            {/* <div className='logo px-0'>
+            <div className='logo px-0'>
                 <div className='navbar-title navbar-item'>
                   <NavLink to="/">
                     <img
@@ -134,7 +134,7 @@ const Header = ({ t }: any) =>{
                     />
                   </NavLink>
                 </div>
-            </div> */}
+            </div>
             <div className='search'>
               <input id="quick_search" className="xs-hide" name="quick_search" placeholder="search item here..." type="text" />
             </div>
